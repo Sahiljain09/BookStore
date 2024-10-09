@@ -28,7 +28,7 @@ app.use("/api/v1", CreateOrder);
 app.use("/api/v1", paymentRoutes);
 
 app.get("/", (req, res) => {
-        res.send("Hello from Backend side")
+        res.send("Hello from Backend")
     })
 
 // creating Port
