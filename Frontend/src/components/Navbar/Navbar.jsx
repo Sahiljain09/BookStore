@@ -52,11 +52,7 @@ export const Navbar = () => {
     <>
       <nav className="z-50 relative flex bg-zinc-800 px-8 py-4 text-white items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img
-            className="h-10 me-4"
-            src="/books.png"
-            alt="logo"
-          />
+          <img className="h-10 me-4" src="/books.png" alt="logo" />
           <h1 className="text-2xl font-semibold">BookSpot</h1>
         </Link>
         <div className="nav-links-bookheaven block md:flex items-center gap-4">
@@ -136,12 +132,22 @@ export const Navbar = () => {
             <Link
               to="/LogIn"
               className={`${MobileNav} mb-8 text-3xl font-semibold px-8 py-2 border border-blue-500 rounded text-white hover:bg-white hover:text-zinc-800 transition-all duration-300`}
+              onClick={() =>
+                MobileNav === "hidden"
+                  ? setMobileNav("block")
+                  : setMobileNav("hidden")
+              }
             >
               LogIn
             </Link>
             <Link
               to="/SignUp"
               className={`${MobileNav} mb-8 text-3xl font-semibold px-8 py-2 bg-blue-500 rounded hover:bg-white hover:text-zinc-800 transition-all duration-300`}
+              onClick={() =>
+                MobileNav === "hidden"
+                  ? setMobileNav("block")
+                  : setMobileNav("hidden")
+              }
             >
               SignUp
             </Link>
