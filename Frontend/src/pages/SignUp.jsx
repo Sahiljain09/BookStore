@@ -36,9 +36,9 @@ const SignUp = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          `${import.meta.env.BACKEND_URL}/sign-up`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/sign-up`,
           Values
-          
+
         );
         alert(response.data.message);
         navigate("/LogIn");

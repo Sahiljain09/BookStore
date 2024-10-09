@@ -18,7 +18,7 @@ const Cart = () => {
   // useEffect(() => {
   //   const fetch = async () => {
   //     const response = await axios.get(
-  //       "${import.meta.env.BACKEND_URL}/get-user-cart",
+  //       "${import.meta.env.VITE_BACKEND_URL}/api/v1/get-user-cart",
   //       { headers }
   //     );
   //     setCart(response.data.data);
@@ -31,7 +31,7 @@ const Cart = () => {
     const fetchCart = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.BACKEND_URL}/get-user-cart`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/get-user-cart`,
           { headers }
         );
         setCart(response.data.data);
@@ -47,7 +47,7 @@ const Cart = () => {
 
   const deleteItem = async (bookid) => {
     const response = await axios.put(
-      `${import.meta.env.BACKEND_URL}/remove-from-cart/${bookid}`,
+      `${import.meta.env.VITE_BACKEND_URL}/api/v1/remove-from-cart/${bookid}`,
       {},
       { headers }
     );
@@ -69,7 +69,7 @@ const Cart = () => {
   const createOrder = async () => {
     try {
       const res = await axios.post(
-        `${import.meta.env.BACKEND_URL}/create-order`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/create-order`,
         { amount: Total * 100 }
         // { headers: { "Content-Type": "application/json" } }
       );
@@ -86,7 +86,7 @@ const Cart = () => {
         handler: async function (response) {
           try {
             const verifyRes = await axios.post(
-              `${import.meta.env.BACKEND_URL}/verify-order`,
+              `${import.meta.env.VITE_BACKEND_URL}/api/v1/verify-order`,
               {
                 orderId: response.razorpay_order_id,
                 razorpayPaymentId: response.razorpay_payment_id,
@@ -97,7 +97,7 @@ const Cart = () => {
 
             if (verifyRes.data.isOk) {
               const response = await axios.post(
-                `${import.meta.env.BACKEND_URL}/place-order`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/v1/place-order`,
                 { order: Cart },
                 { headers }
               );
@@ -125,7 +125,7 @@ const Cart = () => {
   // const PlaceOrder = async () => {
   //   try {
   //     const response = await axios.post(
-  //       `${import.meta.env.BACKEND_URL}/place-order`,
+  //       `${import.meta.env.VITE_BACKEND_URL}/api/v1/place-order`,
   //       { order: Cart },
   //       { headers }
   //     );

@@ -14,7 +14,7 @@ const UserOrderHistory = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        `${import.meta.env.BACKEND_URL}/get-order-history`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/get-order-history`,
         { headers }
       );
       setOrderHistory(response.data.data);

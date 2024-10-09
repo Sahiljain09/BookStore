@@ -26,7 +26,7 @@ const LogIn = () => {
       else 
       {
         const response = await axios.post(
-          `${import.meta.env.BACKEND_URL}/sign-in`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/sign-in`,
           Values
         );
 
