@@ -38,6 +38,7 @@ const SignUp = () => {
         const response = await axios.post(
           `${import.meta.env.BACKEND_URL}/sign-up`,
           Values
+          
         );
         alert(response.data.message);
         navigate("/LogIn");
