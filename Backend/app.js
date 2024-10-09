@@ -17,13 +17,7 @@ const paymentRoutes = require("./routes/paymentRoutes")
 
 const port = process.env.PORT || 3000;  
 
-app.use(cors(
-    {
-        origin: ["https://book-store-backend-theta-two.vercel.app/"],
-        methods: ["POST", "GET"],
-        credential: true
-    }
-));
+app.use(cors());
 // routes
 app.use("/api/v1", User);
 app.use("/api/v1", Books);
