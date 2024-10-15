@@ -29,6 +29,11 @@ const Cart = () => {
 
   useEffect(() => {
     const fetchCart = async () => {
+      // const response = await axios.get(
+      //       `${import.meta.env.VITE_BACKEND_URL}/api/v1/get-user-cart`,
+      //       { headers }
+      //     );
+      //     setCart(response.data.data);
       try {
         const response = await axios.get(
           `${import.meta.env.VITE_BACKEND_URL}/api/v1/get-user-cart`,
@@ -43,7 +48,7 @@ const Cart = () => {
       }
     };
     fetchCart();
-  }, []);
+  }, [Cart]);
 
   const deleteItem = async (bookid) => {
     const response = await axios.put(
