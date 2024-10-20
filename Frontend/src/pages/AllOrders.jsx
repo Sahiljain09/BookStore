@@ -13,6 +13,7 @@ const AllOrders = () => {
   const [Values, setValues] = useState({ status: "" });
   const [userDiv, setuserDiv] = useState("hidden");
   const [userDivData, setuserDivData] = useState();
+  // const [reloadData, setReloadData] = useState(false);
 
   const headers = {
     id: localStorage.getItem("id"),
@@ -46,6 +47,34 @@ const AllOrders = () => {
     alert(response.data.message);
     // console.log(response);
   };
+
+  // const submitChanges = async (i) => {
+  //   const id = AllOrders[i]._id;
+  //   try {
+  //     const response = await axios.put(
+  //       `${import.meta.env.VITE_BACKEND_URL}/api/v1/update-status/${id}`,
+  //       Values,
+  //       { headers }
+  //     );
+
+  //     // Update the order in the state using the returned updated order
+  //     const updatedOrder = response.data.data;
+
+  //     setAllOrders((prevOrders) => {
+  //       const updatedOrders = [...prevOrders];
+  //       updatedOrders[i] = updatedOrder; // Replace the updated order in the state
+  //       return updatedOrders;
+  //     });
+
+  //     // Hide the options after updating the status
+  //     setOptions(-1);
+
+  //     alert(response.data.message);
+  //   } catch (error) {
+  //     console.error("Error updating status:", error);
+  //     alert("An error occurred while updating status.");
+  //   }
+  // };
 
   AllOrders && AllOrders.splice(AllOrders.length - 1, 1);
 
@@ -112,6 +141,8 @@ const AllOrders = () => {
                       <div className="text-green-500">{items.status}</div>
                     ) : items.status === "Canceled" ? (
                       <div className="text-red-500">{items.status}</div>
+                    ) : items.status === "Out for Delivery" ? (
+                      <div className="text-cyan-400">{items.status}</div>
                     ) : (
                       <div className="text-yellow-500">{items.status}</div>
                     )}
@@ -157,7 +188,10 @@ const AllOrders = () => {
                   onClick={() => {
                     setuserDiv("fixed");
                     // setuserDivData(items.user);
-                    setuserDivData({ user: items.user, orderCreatedAt: items.createdAt });
+                    setuserDivData({
+                      user: items.user,
+                      orderCreatedAt: items.createdAt,
+                    });
                   }}
                 >
                   <IoOpenOutline />

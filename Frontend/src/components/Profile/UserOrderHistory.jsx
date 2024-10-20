@@ -94,6 +94,8 @@ const UserOrderHistory = () => {
                     <div className="text-green-500">{items.status}</div>
                   ) : items.status === "Canceled" ? (
                     <div className="text-red-500">{items.status}</div>
+                  ) : items.status === "Out for Delivery" ? (
+                    <div className="text-cyan-400">{items.status}</div>
                   ) : (
                     items.status
                   )}
