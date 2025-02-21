@@ -23,7 +23,7 @@
 - **Payment Gateway:** Razorpay  
 
 ## Deployment  
-- Hosted on Vercel: [BookSpot Live Demo](https://book-store-frontend-mauve.vercel.app/all-books)  
+- Hosted on Vercel: [BookSpot Live Demo](https://book-store-frontend-mauve.vercel.app)  
 
 ## Getting Started  
 
