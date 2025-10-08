@@ -15,6 +15,7 @@ router.post("/create-order", async (req, res) => {
       amount,
       currency: "INR",
     });
+    console.log("Razorpay Key:", process.env.RAZORPAY_API_KEY);
     return res.json(order); // Send the order details as a JSON response
   } catch (error) {
     // console.error("Error creating Razorpay order:", error);

@@ -81,7 +81,7 @@ const Cart = () => {
       const data = res.data;
 
       const paymentData = {
-        key: import.meta.env.REACT_APP_RAZORPAY_API_KEY,
+        key: import.meta.env.VITE_RAZORPAY_API_KEY,
         order_id: data.id,
         currency: "INR",
         name: "BookSpot", //your business name

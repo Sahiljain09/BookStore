@@ -25,22 +25,45 @@
 ## Deployment  
 - Hosted on Vercel: [BookSpot Live Demo](https://book-store-frontend-mauve.vercel.app)  
 
-## Getting Started  
+## Local Development Setup
 
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/Sahiljain09/BookStore.git  
-   ```  
+Follow these instructions to get the project running on your local machine.
 
-2. Install dependencies:  
-   ```bash  
-   npm install  
-   ```  
+### Prerequisites
 
-3. Run the application:  
-   ```bash  
-   npm start  
-   ```  
+-   Node.js installed on your machine.
+-   MongoDB instance (local or cloud-based like MongoDB Atlas).
+-   Git installed.
+
+### 1. Clone the Repository
+
+First, clone the project repository to your local machine:
+
+```bash
+git clone [https://github.com/Sahiljain09/BookStore.git](https://github.com/Sahiljain09/BookStore.git)
+cd BookStore
+```
+
+### 2. Install dependencies in both frontend and backend folder seperatley:
+```bash
+npm install
+```  
+
+### 3. Create an environment file by copying the example file in both frontend and backend.
+
+```bash
+copy .env.example .env
+```  
+
+### 4. Run the application:
+Start the backend server:
+```bash
+npm start
+```  
+Start the frontend:
+```bash
+npm run dev
+```  
 
 4. Access the app locally at `http://localhost:3000`.  
 
