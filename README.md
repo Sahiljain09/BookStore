@@ -6,7 +6,7 @@
 - **User Functionality:**  
   - Browse and search books.  
   - Add books to the cart and wishlist.  
-  - Checkout with Razorpay payment integration.  
+  - Check out with Razorpay payment integration.  
 
 - **Admin Panel:**  
   - Real-time order management and status updates.  
@@ -14,7 +14,7 @@
 
 - **Performance:**  
   - Scalable to handle 1,000+ concurrent users.  
-  - Optimized for seamless user navigation and minimal latency.  
+  - Optimised for seamless user navigation and minimal latency.  
 
 ## Tech Stack  
 - **Frontend:** ReactJS, HTML, CSS, JavaScript  
@@ -31,7 +31,7 @@ Follow these instructions to get the project running on your local machine.
 
 ### Prerequisites
 
--   Node.js installed on your machine.
+-   Node.js is installed on your machine.
 -   MongoDB instance (local or cloud-based like MongoDB Atlas).
 -   Git installed.
 
@@ -40,16 +40,16 @@ Follow these instructions to get the project running on your local machine.
 First, clone the project repository to your local machine:
 
 ```bash
-git clone [https://github.com/Sahiljain09/BookStore.git](https://github.com/Sahiljain09/BookStore.git)
+git clone https://github.com/Sahiljain09/BookStore.git
 cd BookStore
 ```
 
-### 2. Install dependencies in both frontend and backend folder seperatley:
+### 2. Install dependencies in both the frontend and backend folders separately:
 ```bash
 npm install
 ```  
 
-### 3. Create an environment file by copying the example file in both frontend and backend.
+### 3. Create an environment file by copying the example file in both the frontend and backend.
 
 ```bash
 copy .env.example .env
